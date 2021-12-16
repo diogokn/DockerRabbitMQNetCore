@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\OrderController.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="7.3.0" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.0" />
+    <PackageReference Include="MassTransit.Automatonymous.Extensions.DependencyInjection" Version="5.5.6" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.3.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared.Model\Shared.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+</Project>
